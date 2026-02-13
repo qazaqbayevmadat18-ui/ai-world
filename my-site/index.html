@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <title>Sun’iy Intellekt Portali</title>
+
+    <style> /* 📱 Telefon uchun */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    input#searchInput {
+        width: 90%;
+    }
+}
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            max-width: 750px;
+            margin: auto;
+            color: #cbd5f5;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            padding: 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 16px;
+            transition: 0.3s ease;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: #334155;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .card p {
+            font-size: 15px;
+            color: #e5e7eb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body> <script>
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".card");
+
+searchInput.addEventListener("keyup", function () {
+    const value = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+        const name = card.getAttribute("data-name");
+
+        if (name.includes(value)) {
+            card.parentElement.style.display = "block";
+        } else {
+            card.parentElement.style.display = "none";
+        }
+    });
+});
+</script>
+
+
+<header>
+    <h1>Sun’iy Intellekt (AI)</h1>
+    <p>
+        Ushbu sayt sun’iy intellektning asosiy yo‘nalishlari,
+        texnologiyalari va ularning real hayotdagi qo‘llanilishi
+        haqida ma’lumot beradi.
+    </p>
+</header>
+
+<div class="cards">
+
+    <a href="machine-learning.html" class="card-link">
+        <div class="card">
+            <h3>Machine Learning</h3>
+            <p>Ma’lumotlar asosida o‘rganadigan sun’iy intellekt tizimlari.</p>
+        </div>
+    </a>
+
+    <a href="deep-learning.html" class="card-link">
+        <div class="card">
+            <h3>Deep Learning</h3>
+            <p>Neyron tarmoqlar yordamida chuqur tahlil qiluvchi AI.</p>
+        </div>
+    </a>
+
+    <a href="computer-vision.html" class="card-link">
+        <div class="card">
+            <h3>Computer Vision</h3>
+            <p>Rasm va videolarni ko‘ra oladigan AI texnologiyasi.</p>
+        </div>
+    </a>
+
+    <a href="chatbot.html" class="card-link">
+        <div class="card">
+            <h3>Chatbotlar</h3>
+            <p>Inson bilan muloqot qila oladigan sun’iy intellekt.</p>
+        </div>
+    </a>
+
+</div>
+
+<footer>
+    © 2026 AI Portal | O‘rganish va rivojlanish uchun
+</footer>
+
+</body>
+</html>
+<section style="max-width:900px;margin:40px auto;padding:0 20px;">
+    <h2 style="color:#38bdf8;">Sun’iy Intellekt nima?</h2>
+    <p>
+        Sun’iy Intellekt (AI) — bu kompyuter tizimlarining
+        inson aqliga o‘xshash tarzda o‘ylashi, o‘rganishi,
+        qaror qabul qilishi va muammolarni hal qilishidir.
+    </p>
+
+    <p> <input 
+    type="text" 
+    id="searchInput"
+    placeholder="AI bo‘limini qidirish..."
+    style="
+        margin-top:20px;
+        padding:12px 18px;
+        width:280px;
+        border-radius:25px;
+        border:none;
+        outline:none;
+        font-size:15px;
+    "
+>
+
+        AI hozirda tibbiyot, ta’lim, transport, biznes,
+        xavfsizlik va ko‘plab sohalarda keng qo‘llanilmoqda.
+    </p>
+</section>
+<section style="background:#1e293b;padding:40px;text-align:center;">
+    <h2 style="color:#38bdf8;">AI Dunyo Statistikasi</h2>
+
+    <p>🤖 2020-yil: 500 million foydalanuvchi</p>
+    <p>🤖 2023-yil: 1.5 milliard foydalanuvchi</p>
+    <p>🤖 2025-yil: 3+ milliard foydalanuvchi (taxmin)</p>
+
+    <p style="font-size:14px;color:#94a3b8;">
+        Manba: Global AI tadqiqotlar
+    </p>
+</section>
+
+
+
+

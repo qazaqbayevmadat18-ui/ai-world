@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b0f1a;
+    color: #ffffff;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #00ff99, #0066ff);
+    color: #000;
+}
+
+.header h1 {
+    font-size: 48px;
+}
+
+.header p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #000;
+    color: #00ff99;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: #11162a;
+    padding: 15px;
+}
+
+.navbar a {
+    color: #00ff99;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.section p, .section li {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.dark {
+    background: #0f162e;
+}
+
+ul {
+    list-style: none;
+}
+
+/* FOOTER */
+.footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    color: #888;
+}
+/* HOVER EFFECTS */
+.btn:hover {
+    background: #00ff99;
+    color: #000;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #00ff99;
+}
+
+/* SCROLL ANIMATION */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.8s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* CHAT */
+.chat-box {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #0b0f1a;
+    border-radius: 12px;
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.chat-box div {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.user {
+    background: #0066ff;
+    margin-left: auto;
+}
+
+.bot {
+    background: #00ff99;
+    color: #000;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.chat-input input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #00ff99;
+    cursor: pointer;
+}
+/* AI CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: #11162a;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #00ff99;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px #00ff99;
+}
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+/* AI STATISTICS CHART */
+.chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 300px;
+    margin-top: 40px;
+}
+
+.bar {
+    text-align: center;
+    color: #fff;
+    width: 60px;
+}
+
+.bar div {
+    background: linear-gradient(180deg, #00ff99, #00ccff);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 14px;
+    padding-bottom: 5px;
+    transition: 0.4s;
+}
+
+.bar div:hover {
+    transform: scale(1.05);
+}
+
+.bar span {
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+}
+/* Animation start state */
+.bar div {
+    height: 0;
+    overflow: hidden;
+}
